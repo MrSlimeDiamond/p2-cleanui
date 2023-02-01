@@ -6,7 +6,7 @@ This is not allowed in any% speedruns because it removes buttons on the main men
 ## Installation
 Go to the [releases](https://github.com/MrSlimeDiamond/p2-cleanui/releases)
  
-Download `pak01_dir.vpk`, put it in a new DLC folder (if you don't have one, make a `portal2_dlc3` folder `in Portal 2/`)
+Download `pak01_dir.vpk`, put it in a new DLC folder (if you don't have one, make a `portal2_dlc3` folder in `Portal 2/`)
 
 Copy everything in `media/` into `Portal 2/portal2/media` (don't worry, there's a copy of the default backgrounds!)
 
