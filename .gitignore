@@ -1,0 +1,4 @@
+# so that only things that are actually part of the UI are included, and not tools :)
+*.vpk
+*.dll
+*.exe
