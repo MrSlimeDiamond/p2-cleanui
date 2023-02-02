@@ -71,7 +71,7 @@ Scheme
 		Border.DarkBrown				"DarkBrown"
 		Border.White					"White"
 
-		Button.TextColor				"black"
+		Button.TextColor				"white" // CleanUI :: This might fix smth, idk?
 		Button.BgColor					"blank"
 		Button.ArmedTextColor			"black"
 		Button.ArmedBgColor				"blank"
@@ -119,8 +119,8 @@ Scheme
 		GraphPanel.FgColor				"White"
 		GraphPanel.BgColor				"TransparentBlack"
 
-		Label.TextDullColor				"Black"
-		Label.TextColor					"DarkGrey"
+		Label.TextDullColor				"OffWhite"
+		Label.TextColor					"White"
 		Label.TextBrightColor			"LightBlue"
 		Label.SelectedTextColor			"White"
 		Label.BgColor					"Blank"
@@ -161,22 +161,40 @@ Scheme
 		RichText.SelectedTextColor		"Black"
 		RichText.SelectedBgColor		"LightBlue"
 
-		ScrollBar.Wide						"12"
+		// gameconsole has no scrollbar (and shipped without one working), nor symbols to do arrows,
+		// so now adjusting for gameuibuttons to supply arrows as a hack for DLC sectionedlistpanel
+		// which cannot put the arrows at the bottom
+		ScrollBar.Wide						"12"		[!$GAMECONSOLE]
+		ScrollBar.Wide						"16"		[$GAMECONSOLE && $GAMECONSOLELODEF]
+		ScrollBar.Wide						"18"		[$GAMECONSOLE && $GAMECONSOLEHIDEF]
 
-		ScrollBarButton.FgColor				"Black"
-		ScrollBarButton.BgColor				"Blank"
-		ScrollBarButton.ArmedFgColor		"White"
-		ScrollBarButton.ArmedBgColor		"Blank"
-		ScrollBarButton.DepressedFgColor	"White"
-		ScrollBarButton.DepressedBgColor	"Blank"
+		ScrollBarButton.FgColor				"White"		[!$GAMECONSOLE]
+		ScrollBarButton.BgColor				"Blank"		[!$GAMECONSOLE]
+		ScrollBarButton.ArmedFgColor		"White"		[!$GAMECONSOLE]
+		ScrollBarButton.ArmedBgColor		"Blank"		[!$GAMECONSOLE]
+		ScrollBarButton.DepressedFgColor	"White"		[!$GAMECONSOLE]
+		ScrollBarButton.DepressedBgColor	"Blank"		[!$GAMECONSOLE]
 
-		ScrollBarSlider.FgColor				"0 0 0 255"			// nob color
-		ScrollBarSlider.BgColor				"0 0 0 40"			// slider background color
-		ScrollBarSlider.NobFocusColor		"White"
-		ScrollBarSlider.NobDragColor		"White"
+		ScrollBarButton.FgColor				"Blank"		[$GAMECONSOLE]
+		ScrollBarButton.BgColor				"Blank"		[$GAMECONSOLE]
+		ScrollBarButton.ArmedFgColor		"Blank"		[$GAMECONSOLE]
+		ScrollBarButton.ArmedBgColor		"Blank"		[$GAMECONSOLE]
+		ScrollBarButton.DepressedFgColor	"Blank"		[$GAMECONSOLE]
+		ScrollBarButton.DepressedBgColor	"Blank"		[$GAMECONSOLE]
+
+		ScrollBarSlider.FgColor				"0 0 0 255"	[!$GAMECONSOLE]		// nob color
+		ScrollBarSlider.BgColor				"0 0 0 40"	[!$GAMECONSOLE]		// slider background color
+		ScrollBarSlider.NobFocusColor		"White"		[!$GAMECONSOLE]	
+		ScrollBarSlider.NobDragColor		"White"		[!$GAMECONSOLE]
+
+		ScrollBarSlider.FgColor				"Blank"		[$GAMECONSOLE]		// nob color
+		ScrollBarSlider.BgColor				"Blank"		[$GAMECONSOLE]		// slider background color
+		ScrollBarSlider.NobFocusColor		"Blank"		[$GAMECONSOLE]	
+		ScrollBarSlider.NobDragColor		"Blank"		[$GAMECONSOLE]
 		ScrollBarSlider.Inset				"3"
 
-		SectionedListPanel.HeaderTextColor				"128 128 128 255"
+		SectionedListPanel.HeaderTextColor				"100 100 100 255"	[$GAMECONSOLE]
+		SectionedListPanel.HeaderTextColor				"128 128 128 255"	[!$GAMECONSOLE]
 		SectionedListPanel.HeaderBgColor				"Blank"
 		SectionedListPanel.DividerColor					"Black"
 		SectionedListPanel.TextColor					"LightBlue"
@@ -223,9 +241,18 @@ Scheme
 		Logo.X								"50"	[$GAMECONSOLE && (!$GAMECONSOLEWIDE || $ANAMORPHIC)]						
 		Logo.X								"75"	[!$GAMECONSOLE && $WIN32WIDE]
 		Logo.X								"50"	[!$GAMECONSOLE && !$WIN32WIDE]						
-		Logo.Y								"35"
-		Logo.Width							"240"
-		Logo.Height							"60"
+		Logo.Y								"45"	[$DECK]
+		Logo.Y								"35"	[!$DECK]
+		Logo.Width							"300"	[$DECK]
+		Logo.Width							"240"	[!$DECK]
+		Logo.Height							"75"	[$DECK]
+		Logo.Height							"60"	[!$DECK]
+					
+		AltLogo.X								"75"	[!$GAMECONSOLE && $WIN32WIDE]
+		AltLogo.X								"50"	[!$GAMECONSOLE && !$WIN32WIDE]	
+		AltLogo.Y								"35"
+		AltLogo.Width							"240"
+		AltLogo.Height							"60"
 		
 		SteamCloud.X						"350"	[$GAMECONSOLE && ($GAMECONSOLEWIDE && !$ANAMORPHIC)]
 		SteamCloud.X						"325"	[$GAMECONSOLE && (!$GAMECONSOLEWIDE || $ANAMORPHIC)]						
@@ -262,23 +289,28 @@ Scheme
 		FooterPanel.TextFont				"ButtonText"			[$GAMECONSOLE]
 		FooterPanel.TextFont				"ButtonText_NC"			[!$GAMECONSOLE]
 		FooterPanel.TextOffsetX				"4"						[$GAMECONSOLE]
-		FooterPanel.TextOffsetX				"0"						[!$GAMECONSOLE]
+		FooterPanel.TextOffsetX				"3"						[!$GAMECONSOLE]
 		FooterPanel.TextOffsetY				"-1"					[$PS3]
 		FooterPanel.TextOffsetY				"1"						[$X360]
 		FooterPanel.TextOffsetY				"0"						[!$GAMECONSOLE && !$OSX]
 		FooterPanel.TextOffsetY				"-1"					[$OSX]
-		FooterPanel.TextColor				"100 100 100 255"
-		FooterPanel.InGameTextColor			"100 100 100 255"
+		FooterPanel.TextColor				"0 0 0 255"
+		FooterPanel.InGameTextColor			"122 122 124 255"
 		FooterPanel.ButtonGapX				"12"					[!$GAMECONSOLE]
 		FooterPanel.ButtonGapX				"20"					[$GAMECONSOLE && ($ENGLISH || $GAMECONSOLEWIDE)]
 		FooterPanel.ButtonGapX				"16"					[$GAMECONSOLE && (!$ENGLISH && !$GAMECONSOLEWIDE)]
 		FooterPanel.ButtonGapY				"25"
 		FooterPanel.ButtonPaddingX			"20"					[!$GAMECONSOLE]
-		FooterPanel.OffsetY					"16"					[$GAMECONSOLE]
-		FooterPanel.OffsetY					"12"					[!$GAMECONSOLE]
+		FooterPanel.OffsetY					"16"					[$GAMECONSOLE || $DECK]
+		FooterPanel.OffsetY					"12"					[!$GAMECONSOLE && !$DECK]
 		FooterPanel.BorderColor				"130 130 130 255"		[!$GAMECONSOLE]	
 		FooterPanel.BorderArmedColor		"180 180 180 255"		[!$GAMECONSOLE]
 		FooterPanel.BorderDepressedColor	"blank"					[!$GAMECONSOLE]
+		FooterPanel.BorderColorAlt				"64 64 64 255"		[!$GAMECONSOLE]	
+		FooterPanel.BorderArmedColorAlt		"128 128 128 255"		[!$GAMECONSOLE]
+		FooterPanel.BorderDepressedColorAlt	"blank"					[!$GAMECONSOLE]
+		FooterPanel.TextColorAlt			"182 182 184 255"
+		FooterPanel.InGameTextColor			"182 182 184 255"
 
 		FooterPanel.AvatarSize				"32"
 		FooterPanel.AvatarBorderSize		"40"
@@ -288,8 +320,11 @@ Scheme
 		FooterPanel.AvatarTextFont			"ButtonText"
 
 		Dialog.TitleFont					"DialogTitle"
-		Dialog.TitleColor					"0 0 0 255"
+		Dialog.TitleColor					"255 255 255 255"
+		Dialog.TitleColorAlt			"154 167 164 255"
+		Dialog.TitleFont                 "MainMenuItem"
 		Dialog.MessageBoxTitleColor			"0 0 0 255"
+		Dialog.MessageBoxTitleColorAlt			"154 167 164 255"
 		Dialog.TitleOffsetX					"10"
 		Dialog.TitleOffsetY					"9"		[!$X360 && !$OSX]
 		Dialog.TitleOffsetY					"10"	[$X360]
@@ -313,11 +348,21 @@ Scheme
 		SliderControl.BackgroundColor		"150 150 150 255"
 		SliderControl.ForegroundFocusColor	"255 255 255 255"
 		SliderControl.BackgroundFocusColor	"150 150 150 255"
+		
+		SliderControl.MarkColorAlt			"150 150 150 255"
+		SliderControl.MarkFocusColorAlt	"0 0 0 255"
+		SliderControl.ForegroundColorAlt	"201 211 207 255"
+		SliderControl.BackgroundColorAlt	"150 150 150 255"
+		SliderControl.ForegroundFocusColorAlt	"0 0 0 255"
+		SliderControl.BackgroundFocusColorAlt	"150 150 150 255"
 
 		LoadingProgress.NumDots				"15"
-		LoadingProgress.DotGap				"3"
-		LoadingProgress.DotWidth			"8"
-		LoadingProgress.DotHeight			"8"
+		LoadingProgress.DotGap				"4" [$DECK]
+		LoadingProgress.DotWidth			"12" [$DECK]
+		LoadingProgress.DotHeight			"12" [$DECK]
+		LoadingProgress.DotGap				"3" [!$DECK]
+		LoadingProgress.DotWidth			"8" [!$DECK]
+		LoadingProgress.DotHeight			"8" [!$DECK]
 
 		ConfirmationDialog.TextFont			"ConfirmationText"
 		ConfirmationDialog.TextOffsetX		"5"
@@ -333,10 +378,19 @@ Scheme
 		KeyBindings.KeyColumnWidth			"150"
 		KeyBindings.HeaderFont				"KeyBindingsHeader"
 		KeyBindings.KeyFont					"DialogButton"
+		
+		CustomButtonBindings.ActionColumnWidth		"200"
+		CustomButtonBindings.ButtonColumnWidth		"150"
+		CustomButtonBindings.HeaderFont				"KeyBindingsHeader"
+		CustomButtonBindings.ButtonFont				"DialogButton"
+		CustomButtonBindings.ArrowInset				"2"	[$GAMECONSOLEHIDEF]
+		CustomButtonBindings.ArrowInset				"3"	[$GAMECONSOLELODEF]
+		CustomButtonBindings.ButtonOffset			"50"
 
 		InlineEditPanel.FillColor			"9 190 255 100"
 		InlineEditPanel.DashColor			"Black"
-		InlineEditPanel.LineSize			"1"
+		InlineEditPanel.LineSize			"1"		[!$GAMECONSOLE]
+		InlineEditPanel.LineSize			"2"		[$GAMECONSOLE]
 		InlineEditPanel.DashLength			"6"
 		InlineEditPanel.GapLength			"3"
 				
@@ -346,11 +400,11 @@ Scheme
 
 		// sets the defaults for any hybrid buttons
 		// each "styled" hybrid button overrides as necessary
-		HybridButton.TextColor						"0 0 0 255"
+		HybridButton.TextColor						"120 120 120 255"
 		HybridButton.FocusColor						"240 240 240 255"	[!$GAMECONSOLE]
 		HybridButton.FocusColor						"255 255 255 255"	[$GAMECONSOLE]
-		HybridButton.CursorColor					"0 0 0 240"			[!$GAMECONSOLE || $X360]
-		HybridButton.CursorColor					"0 0 0 200"			[$PS3]
+		HybridButton.CursorColor					"0 0 0 0"			[!$GAMECONSOLE || $X360] // CleanUI :: Remove highlight
+		HybridButton.CursorColor					"0 0 0 0"			[$PS3] // CleanUI :: Remove highlight
 		HybridButton.DisabledColor					"140 140 140 255"	[!$GAMECONSOLE]
 		HybridButton.FocusDisabledColor				"140 140 140 255"	[!$GAMECONSOLE]
 		HybridButton.LockedColor					"140 140 140 255"	[!$GAMECONSOLE]
@@ -369,18 +423,26 @@ Scheme
 		HybridButton.ListButtonInactiveColor		"255 255 255 60"
 		HybridButton.MouseOverCursorColor			"0 0 0 40"
 
+		// Alternate hybrid button colors
+		HybridButton.TextColorAlt						"201 211 207 255"
+		HybridButton.FocusColorAlt					"0 0 0 255"
+		HybridButton.CursorColorAlt					"219 214 133 128"		
+		HybridButton.MouseOverCursorColorAlt			"219 214 133 255"
+		HybridButton.ListButtonActiveColorAlt			"0 0 0 255"
+		HybridButton.ListButtonInactiveColorAlt			"0 0 0 180"
+
 		// any primary menu (not the main menu)
 		DefaultButton.Style							"0"
 		DefaultButton.AllCaps						"0"
-		MainMenuButton.TextColor					"120 120 120 255"
-		MainMenuButton.FocusColor					"0 0 0 0"
+		DefaultButton.TextColor					"120 120 120 255"
+		DefaultButton.FocusColor					"255 255 255 255"
 			
 		// main menu only
 		MainMenuButton.Style						"1"
 		MainMenuButton.TextColor					"120 120 120 255"
-		MainMenuButton.FocusColor					"0 0 0 0"
-		MainMenuButton.CursorColor					"255 255 255 15"	[!$GAMECONSOLE || $X360]
-		MainMenuButton.CursorColor					"255 255 255 50"	[$PS3]
+		MainMenuButton.FocusColor					"255 255 255 255"
+		MainMenuButton.CursorColor					"255 255 255 0"	[!$GAMECONSOLE || $X360] // CleanUI :: Remove highlight
+		MainMenuButton.CursorColor					"255 255 255 0"	[$PS3] // CleanUI :: Remove highlight
 		MainMenuButton.Font							"MainMenuItem"
 		MainMenuButton.TextInsetX					"10"
 		MainMenuButton.TextInsetY					"2"		[!$GAMECONSOLE && !$OSX]
@@ -782,7 +844,7 @@ Scheme
 			"isproportional"	"no"	
 			"1"
 			{
-				"name"		"UniversLTStd-Cn"
+				"name"		"D-DIN"
 				"tall"		"106"	[!($PS3 && ($JAPANESE || $TCHINESE || $SCHINESE || $KOREAN))]
 				"tall"		"80"	[$PS3 && ($JAPANESE || $TCHINESE || $SCHINESE || $KOREAN)]
 				"weight"	"400"
@@ -796,7 +858,7 @@ Scheme
 			"isproportional"	"no"	
 			"1"
 			{
-				"name"		"UniversLTStd-Cn"
+				"name"		"D-DIN"
 				"tall"		"34"
 				"weight"	"400"
 				"range"		"0x0000 0x017F" //	Basic Latin, Latin-1 Supplement, Latin Extended-A
@@ -809,7 +871,7 @@ Scheme
 			"isproportional"	"no"	
 			"1"
 			{
-				"name"		"UniversLTStd-Cn"
+				"name"		"D-DIN"
 				"tall"		"12"
 				"weight"	"400"
 				"range"		"0x0000 0x017F" //	Basic Latin, Latin-1 Supplement, Latin Extended-A
@@ -919,7 +981,7 @@ Scheme
 				"scaley"	"1"
 			}
 		}
-
+		
 		GameUIButtonsSteamController
 		{
 			"1"
@@ -975,7 +1037,7 @@ Scheme
 			"1"
 			{
 				"name"		"D-DIN"
-				"tall"		"22"	[!$OSX]
+				"tall"		"18"	[!$OSX]
 				"tall"		"26"	[$OSX]
 				"weight"	"400"
 				"antialias"	"1"
@@ -988,10 +1050,10 @@ Scheme
 			"isproportional"	"only"		
 			"1"
 			{
-				"name"		"UniversLTStd-Cn"
+				"name"		"D-DIN"
 				"tall"		"18"	[!$OSX]
 				"tall"		"21"	[$OSX]
-				"weight"	"700"
+				"weight"	"500"
 				"antialias"	"1"
 			}
 		}
@@ -1002,7 +1064,7 @@ Scheme
 			"isproportional"	"only"		
 			"1"
 			{
-				"name"		"UniversLTStd-BoldCn"
+				"name"		"D-DIN"
 				"tall"		"33"	[!$OSX]
 				"tall"		"37"	[$OSX]
 				"weight"	"400"
@@ -1017,7 +1079,7 @@ Scheme
 			"1" [$GAMECONSOLE]
 			{
 				// SD requires a bolder font
-				"name"		"UniversLTStd-Cn"		[$GAMECONSOLELODEF]
+				"name"		"D-DIN"		[$GAMECONSOLELODEF]
 				// HD can support the lighter/thinner font
 				"name"		"UniversLTStd-LightCn"	[$GAMECONSOLEHIDEF]
 				"weight"	"700"
@@ -1027,13 +1089,41 @@ Scheme
 			"1" [!$GAMECONSOLE]
 			{
 				// HD or PC can support the lighter/thinner font
-				"name"		"UniversLTStd-Cn"		[$WIN32LODEF]
+				"name"		"D-DIN"		[$WIN32LODEF]
 				"tall"		"20"					[$WIN32LODEF && !$OSX]
 				"tall"		"21"					[$WIN32LODEF && $OSX]
 				"weight"	"400"					[$WIN32LODEF]
 				"name"		"UniversLTStd-LightCn"	[$WIN32HIDEF]
 				"tall"		"18"					[$WIN32HIDEF && !$OSX]
 				"tall"		"21"					[$WIN32HIDEF && $OSX]
+				"weight"	"700"					[$WIN32HIDEF]
+				"antialias"	"1"
+			}
+		}
+
+		"VideoSettingsDescriptionTitle"
+		{
+			"isproportional"	"only"		
+			"1"
+			{
+				"name"		"D-DIN"
+				"tall"		"24" [$WIN32WIDE]
+				"tall"		"20" [!$WIN32WIDE]
+				"weight"	"700"
+				"antialias"	"1"
+			}
+		}
+
+		"VideoSettingsDescription"
+		{
+			"isproportional"	"only"		
+			"1"
+			{
+				"name"		"D-DIN"		[$WIN32LODEF]
+				"tall"		"14"					[$WIN32LODEF]
+				"weight"	"400"					[$WIN32LODEF]
+				"name"		"UniversLTStd-LightCn"	[$WIN32HIDEF]
+				"tall"		"17"					[$WIN32HIDEF]
 				"weight"	"700"					[$WIN32HIDEF]
 				"antialias"	"1"
 			}
@@ -1045,7 +1135,7 @@ Scheme
 			"isproportional"	"only"		
 			"1"
 			{
-				"name"		"UniversLTStd-Cn"
+				"name"		"D-DIN"
 				"tall"		"18"
 				"weight"	"400"
 				"antialias"	"1"
@@ -1057,11 +1147,11 @@ Scheme
 			"isproportional"	"only"		
 			"1"
 			{
-				"name"		"UniversLTStd-BoldCn"
+				"name"		"D-DIN"
 				"tall"		"18"		[$DECK]
 				"tall"		"18"		[$WIN32LODEF]
 				"tall"		"15"		[$WIN32HIDEF]
-				"weight"	"400"
+				"weight"	"700"
 				"antialias"	"1"
 			}
 		}
@@ -1071,10 +1161,10 @@ Scheme
 			"isproportional"	"only"		
 			"1"
 			{
-				"name"		"UniversLTStd-BoldCn"
+				"name"		"D-DIN"
 				"tall"		"20"	[!$OSX]
 				"tall"		"22"	[$OSX]
-				"weight"	"400"
+				"weight"	"700"
 				"antialias"	"1"
 			}
 		}
@@ -1085,8 +1175,8 @@ Scheme
 			"isproportional"	"only"		
 			"1"
 			{
-				"name"		"UniversLTStd-BoldCn"	[!$OSX]
-				"name"		"UniversLTStd-Cn"		[$OSX]
+				"name"		"D-DIN"	[!$OSX]
+				"name"		"D-DIN"		[$OSX]
 				"tall"		"15"	[$GAMECONSOLE]
 				"tall"		"18"	[!$GAMECONSOLE && $WIN32LODEF && !$OSX]
 				"tall"		"15"	[!$GAMECONSOLE && $WIN32HIDEF && !$OSX]
@@ -1102,7 +1192,7 @@ Scheme
 			"isproportional"	"only"		
 			"1"
 			{
-				"name"		"UniversLTStd-Cn"
+				"name"		"D-DIN"
 				"tall"		"20"	[!$OSX]
 				"tall"		"24"	[$OSX]
 				"weight"	"700"	[$GAMECONSOLE]
@@ -1116,11 +1206,12 @@ Scheme
 			"isproportional"	"only"		
 			"1"
 			{
-				"name"		"UniversLTStd-Cn"
+				"name"		"D-DIN"
+				"tall"		"24" [$DECK]
 				"tall"		"24" [$GAMECONSOLE]
-				"tall"		"20" [!$GAMECONSOLE && !$OSX]
+				"tall"		"14" [!$GAMECONSOLE && !$OSX] // Windows/Linux
 				"tall"		"24" [!$GAMECONSOLE && $OSX]
-				"weight"	"700"
+				"weight"	"600"
 				"antialias"	"1"
 			}
 		}	
@@ -1130,17 +1221,18 @@ Scheme
 			"isproportional"	"only"		
 			"1" [$OSX]
 			{
-				"name"		"UniversLTStd-Cn"
-				"tall"		"18"
-				"weight"	"400"
+				"name"		"D-DIN"
+				"tall"		"14"
+				"weight"	"600"
 				"antialias"	"1"
 				"yres"	"1 500"
 			}
 			"2"
 			{
-				"name"		"UniversLTStd-BoldCn"
-				"tall"		"18"
-				"weight"	"400"
+				"name"		"D-DIN"
+				"tall"		"14" [$DECK]
+				"tall"		"14"
+				"weight"	"600"
 				"antialias"	"1"
 				"yres"	"501 6000" [$OSX]
 			}
@@ -1151,7 +1243,7 @@ Scheme
 			"isproportional"	"only"		
 			"1"
 			{
-				"name"		"UniversLTStd-Cn"
+				"name"		"D-DIN"
 				"tall"		"14"
 				"weight"	"400"
 				"antialias"	"1"
@@ -1163,7 +1255,7 @@ Scheme
 			"isproportional"	"only"		
 			"1"
 			{
-				"name"		"UniversLTStd-Cn"
+				"name"		"D-DIN"
 				"tall"		"18"	[!$OSX]
 				"tall"		"20"	[$OSX]
 				"weight"	"400"
@@ -1176,10 +1268,10 @@ Scheme
 			"isproportional"	"only"		
 			"1"
 			{
-				"name"		"UniversLTStd-BoldCn"
+				"name"		"D-DIN"
 				"tall"		"18"	[!$OSX]
 				"tall"		"20"	[$OSX]
-				"weight"	"400"
+				"weight"	"700"
 				"antialias"	"1"
 			}
 		}						
@@ -1189,17 +1281,18 @@ Scheme
 			"isproportional"	"only"		
 			"1" [$OSX]
 			{
-				"name"		"UniversLTStd-Cn"
-				"tall"		"18"
+				"name"		"D-DIN"
+				"tall"		"12"
 				"weight"	"400"
 				"antialias"	"1"
 				"yres"	"1 500"
 			}
 			"2" 
 			{
-				"name"		"UniversLTStd-BoldCn"
-				"tall"		"18"
-				"weight"	"400"
+				"name"		"D-DIN"
+				"tall"		"20" [$DECK]
+				"tall"		"12"
+				"weight"	"700"
 				"antialias"	"1"
 				"yres"	"501 6000" [$OSX]
 			}
@@ -1210,7 +1303,7 @@ Scheme
 			"isproportional"	"only"		
 			"1" [$OSX]
 			{
-				"name"		"UniversLTStd-Cn"
+				"name"		"D-DIN"
 				"tall"		"16"
 				"weight"	"400"
 				"antialias"	"1"
@@ -1218,9 +1311,10 @@ Scheme
 			}
 			"2" 
 			{
-				"name"		"UniversLTStd-BoldCn"
+				"name"		"D-DIN"
+				"tall"		"18" [$DECK]
 				"tall"		"16"
-				"weight"	"400"
+				"weight"	"700"
 				"antialias"	"1"
 				"yres"	"501 6000" [$OSX]
 			}
@@ -1232,8 +1326,8 @@ Scheme
 		{
 			"1"
 			{
-				"name"		"UniversLTStd-Cn"
-				"tall"		"20"
+				"name"		"D-DIN"
+				"tall"		"10"
 				"weight"	"500"
 				"antialias"	"1"
 			}
@@ -1243,8 +1337,8 @@ Scheme
 		{	
 			"1"
 			{
-				"name"		"UniversLTStd-Cn"
-				"tall"		"20"
+				"name"		"D-DIN"
+				"tall"		"10"
 				"weight"	"500"
 				"italic"	"1"
 				"antialias"	"1"
@@ -1255,8 +1349,8 @@ Scheme
 		{		
 			"1"
 			{
-				"name"		"UniversLTStd-Cn"
-				"tall"		"20"
+				"name"		"D-DIN"
+				"tall"		"10"
 				"weight"	"900"
 				"antialias"	"1"
 			}
@@ -1266,8 +1360,8 @@ Scheme
 		{
 			"1"
 			{
-				"name"		"UniversLTStd-Cn"
-				"tall"		"20"
+				"name"		"D-DIN"
+				"tall"		"10"
 				"weight"	"900"
 				"italic"	"1"
 				"antialias"	"1"
@@ -1294,8 +1388,9 @@ Scheme
 			"isproportional"	"only"		
 			"1"
 			{
-				"name"			"UniversLTStd-Cn"
-				"tall"			"19"
+				"name"			"D-DIN"
+				"tall"			"24" [$DECK]
+				"tall"			"19" [!$DECK]
 				"weight"		"200"
 				"antialias"		"1"
 			}
@@ -1306,8 +1401,9 @@ Scheme
 			"isproportional"	"only"
 			"1"
 			{
-				"name"			"UniversLTStd-BoldCn"
-				"tall"			"34"
+				"name"			"D-DIN"
+				"tall"			"44" [$DECK]
+				"tall"			"34" [!$DECK]
 				"weight"		"800"
 				"antialias"		"1"
 			}
@@ -1321,7 +1417,7 @@ Scheme
 			"1"
 			{
 				"name"			"UniversLTStd-BoldCn" [!$OSX]
-				"name"			"UniversLTStd-Cn" [$OSX]
+				"name"			"D-DIN" [$OSX]
 				"tall"			"18"
 				"weight"		"400"
 				"antialias"		"1"
@@ -1334,7 +1430,7 @@ Scheme
 			"1"
 			{
 				"name"			"UniversLTStd-BoldCn" [!$OSX]
-				"name"			"UniversLTStd-Cn" [$OSX]
+				"name"			"D-DIN" [$OSX]
 				"tall"			"14"
 				"weight"		"400"
 				"antialias"		"1"
@@ -1394,7 +1490,7 @@ Scheme
 			"isproportional"	"only"
 			"1" [$OSX]
 			{
-				"name"		"UniversLTStd-Cn" [$OSX]
+				"name"		"D-DIN" [$OSX]
 				"tall"		"14"
 				"weight"	"400"
 				"antialias" "0"
@@ -1403,7 +1499,7 @@ Scheme
 			"2"
 			{
 				"name"		"UniversLTStd-BoldCn" [!$OSX]
-				"name"		"UniversLTStd-Cn" [$OSX]
+				"name"		"D-DIN" [$OSX]
 				"tall"		"12"
 				"weight"	"400"
 				"antialias" "1"
@@ -1417,7 +1513,7 @@ Scheme
 			"1"
 			{
 				"name"		"UniversLTStd-BoldCn" [!$OSX]
-				"name"		"UniversLTStd-Cn" [$OSX]
+				"name"		"D-DIN" [$OSX]
 				"tall"		"9"		[!$GAMECONSOLE]
 				"tall"		"12"	[$GAMECONSOLE]
 				"weight"	"400"
@@ -1432,7 +1528,7 @@ Scheme
 			"isproportional"	"only"
 			"1" [$OSX]
 			{
-				"name"		"UniversLTStd-Cn"
+				"name"		"D-DIN"
 				"tall"		"16"
 				"weight"	"400"
 				"range"		"0x0000 0x017F" //	Basic Latin, Latin-1 Supplement, Latin Extended-A
@@ -1472,7 +1568,7 @@ Scheme
 			"1"
 			{
 				"name"		"UniversLTStd-BoldCn" [!$OSX]
-				"name"		"UniversLTStd-Cn" [$OSX]
+				"name"		"D-DIN" [$OSX]
 				"tall"		"24"
 				"weight"	"400"
 				"antialias" "1"
@@ -1489,7 +1585,55 @@ Scheme
 				"weight"	"400"
 				"antialias" "1"
 			}
-		}			
+		}
+
+//////////////////////// PUZZLEMAKER /////////////////////////////
+
+		"PuzzleMakerUISmall"
+		{
+			"1"
+			{
+				"name"		"Arial"
+				"tall"		"16"
+				"weight"	"400"
+				"antialias" "1"
+			}
+		}
+
+		"PuzzleMakerUISmallItalic"
+		{
+			"1"
+			{
+				"name"		"Arial"
+				"tall"		"16"
+				"weight"	"400"
+				"italic"	"1"
+				"antialias" "1"
+			}
+		}
+
+		"PuzzleMakerUIMedium"
+		{
+			"1"
+			{
+				"name"		"Arial"
+				"tall"		"20"
+				"weight"	"400"
+				"antialias" "1"
+			}
+		}
+
+		"PuzzleMakerUIMenuBold"
+		{
+			"1"
+			{
+				"name"		"Arial"
+				"tall"		"24"
+				"weight"	"800"
+				"antialias" "1"
+			}
+		}
+					
 	}
 
 	//
@@ -2173,7 +2317,6 @@ Scheme
 		"11"		"resource/linux_fonts/LiberationSans-Regular.ttf"
 		"12"		"resource/linux_fonts/LiberationSans-Bold.ttf"
 		"13"		"resource/linux_fonts/LiberationMono-Regular.ttf"
-
 		"14"        "resource/fonts/D-DIN.vfont"
     }
 }

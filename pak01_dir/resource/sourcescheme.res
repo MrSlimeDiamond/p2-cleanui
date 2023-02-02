@@ -419,16 +419,15 @@ Scheme
 			}
 		}
 			
+		// the people wanted Consolas!!!
 		"ConsoleText" [!$GAMECONSOLE]
 		{
 			"1"
 			{
-				"name"		"Lucida Console" [!$OSX]
-				"name"		"Lucida Grande" [$OSX]
-				"tall"		"14" [$LINUX]
-				"tall"		"12" [$OSX]
-				"tall"		"10" [!$OSX]
+				"name"		"Consolas"
+				"tall"		"16"
 				"weight"	"500"
+				"antialias" "1"
 			}
 		}
 
@@ -660,6 +659,7 @@ Scheme
 
 		DepressedBorder
 		{
+			"backgroundtype" "0"
 			"inset" "0 0 1 1"
 			Left
 			{
@@ -699,6 +699,7 @@ Scheme
 		}
 		RaisedBorder
 		{
+			"backgroundtype" "0"
 			"inset" "0 0 1 1"
 			Left
 			{
@@ -1081,5 +1082,6 @@ Scheme
 		"11"		"resource/linux_fonts/LiberationSans-Regular.ttf"
 		"12"		"resource/linux_fonts/LiberationSans-Bold.ttf"
 		"13"		"resource/linux_fonts/LiberationMono-Regular.ttf"
+		"14"        "resource/fonts/D-DIN.vfont"
 	}
 }
