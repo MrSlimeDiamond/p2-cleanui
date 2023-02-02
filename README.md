@@ -1,7 +1,7 @@
 # Portal 2 Clean UI Theme (WIP)
 [Installation](https://github.com/MrSlimeDiamond/p2-cleanui#installation) | [Inspiration](https://gamebanana.com/mods/22973) | [Issues](https://github.com/MrSlimeDiamond/p2-cleanui/issues)
 
-<img src="./screenshots/portal2_3OryiHkf0f.png" alt="how it looks atm" width="500"/>
+<img src="./screenshots/main_menu.png" alt="how it looks atm" width="500"/>
 
 ## !!! WARNING !!!
 This is not allowed in any% speedruns because it removes buttons on the main menu screen which can provide an advantage.
