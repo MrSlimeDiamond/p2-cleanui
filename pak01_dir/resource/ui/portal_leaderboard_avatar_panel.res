@@ -12,7 +12,7 @@
 		"visible"			"1"
 		"enabled"			"1"
 		"bgcolor_override"	"255 255 255 0"
-		"fgcolor_override"		"221 221 221 255"
+		"fgcolor_override"		"200 200 200 255"
 	}
 
 	"PnlGamerPic"
@@ -47,7 +47,7 @@
 		"Font"					"FriendsList"
 		"labelText"				""
 		"textAlignment"			"west"
-		"fgcolor_override"		"221 221 221 255"
+		"fgcolor_override"		"200 200 200 255"
 		"noshortcutsyntax"		"1"
 	}
 
@@ -68,7 +68,7 @@
 		"Font"					"FriendsListSmall" 
 		"labelText"				""
 		"textAlignment"			"west"
-		"fgcolor_override"		"221 221 221 255"
+		"fgcolor_override"		"200 200 200 255"
 		"noshortcutsyntax"		"1"
 	}
 
@@ -88,7 +88,7 @@
 		"Font"					"FriendsListSmall"
 		"labelText"				""
 		"textAlignment"			"east"
-		"fgcolor_override"		"221 221 221 255"
+		"fgcolor_override"		"200 200 200 255"
 		"noshortcutsyntax"		"1"
 	}
 }
