@@ -113,7 +113,7 @@ Scheme
 	// controls use these to determine their settings
 	BaseSettings
 	{
-		Label.TextDullColor				"TanDark"
+		Label.TextDullColor				"White" // will this work idfk
 		Label.TextColor					"TanLight"
 		Label.TextBrightColor			"TanLight"
 		Label.SelectedTextColor			"White"

@@ -182,7 +182,7 @@ Scheme
 		ScrollBarButton.DepressedFgColor	"Blank"		[$GAMECONSOLE]
 		ScrollBarButton.DepressedBgColor	"Blank"		[$GAMECONSOLE]
 
-		ScrollBarSlider.FgColor				"0 0 0 255"	[!$GAMECONSOLE]		// nob color
+		ScrollBarSlider.FgColor				"OffWhite"	[!$GAMECONSOLE]		// nob color
 		ScrollBarSlider.BgColor				"0 0 0 40"	[!$GAMECONSOLE]		// slider background color
 		ScrollBarSlider.NobFocusColor		"White"		[!$GAMECONSOLE]	
 		ScrollBarSlider.NobDragColor		"White"		[!$GAMECONSOLE]
@@ -231,7 +231,7 @@ Scheme
 
 		WizardSubPanel.BgColor		"Blank"
 
-		Console.TextColor			"OffWhite"
+		Console.TextColor			"LightBlue" // cleanui thing
 		Console.DevTextColor		"White"
 		
 		//
@@ -324,7 +324,7 @@ Scheme
 		Dialog.TitleColor					"255 255 255 255"
 		Dialog.TitleColorAlt			"154 167 164 255"
 		Dialog.TitleFont                 "MainMenuItem"
-		Dialog.MessageBoxTitleColor			"0 0 0 255"
+		Dialog.MessageBoxTitleColor			"255 255 255 255"
 		Dialog.MessageBoxTitleColorAlt			"154 167 164 255"
 		Dialog.TitleOffsetX					"10"
 		Dialog.TitleOffsetY					"9"		[!$X360 && !$OSX]
@@ -611,7 +611,7 @@ Scheme
 
 		"InGameChapterTitle"
 		{
-			"uppercase"		"1"
+			"uppercase"		"0" // CleanUI
 			"numbers"		"1"
 			"russianchars"		"1"
 		}
@@ -845,7 +845,7 @@ Scheme
 			"isproportional"	"no"	
 			"1"
 			{
-				"name"		"D-DIN"
+				"name"		"UniversLTStd-Cn"
 				"tall"		"106"	[!($PS3 && ($JAPANESE || $TCHINESE || $SCHINESE || $KOREAN))]
 				"tall"		"80"	[$PS3 && ($JAPANESE || $TCHINESE || $SCHINESE || $KOREAN)]
 				"weight"	"400"
@@ -859,7 +859,7 @@ Scheme
 			"isproportional"	"no"	
 			"1"
 			{
-				"name"		"D-DIN"
+				"name"		"UniversLTStd-Cn"
 				"tall"		"34"
 				"weight"	"400"
 				"range"		"0x0000 0x017F" //	Basic Latin, Latin-1 Supplement, Latin Extended-A
@@ -872,7 +872,7 @@ Scheme
 			"isproportional"	"no"	
 			"1"
 			{
-				"name"		"D-DIN"
+				"name"		"UniversLTStd-Cn"
 				"tall"		"12"
 				"weight"	"400"
 				"range"		"0x0000 0x017F" //	Basic Latin, Latin-1 Supplement, Latin Extended-A
@@ -982,7 +982,7 @@ Scheme
 				"scaley"	"1"
 			}
 		}
-		
+
 		GameUIButtonsSteamController
 		{
 			"1"
@@ -1037,8 +1037,8 @@ Scheme
 			"isproportional"	"only"		
 			"1"
 			{
-				"name"		"D-DIN"
-				"tall"		"18"	[!$OSX]
+				"name"		"D-DIN" // UniversLTStd-Cn
+				"tall"		"22"	[!$OSX]
 				"tall"		"26"	[$OSX]
 				"weight"	"400"
 				"antialias"	"1"
@@ -1051,10 +1051,10 @@ Scheme
 			"isproportional"	"only"		
 			"1"
 			{
-				"name"		"D-DIN"
+				"name"		"D-DIN" // UniversLTStd-Cn
 				"tall"		"18"	[!$OSX]
 				"tall"		"21"	[$OSX]
-				"weight"	"500"
+				"weight"	"700"
 				"antialias"	"1"
 			}
 		}
@@ -1065,7 +1065,7 @@ Scheme
 			"isproportional"	"only"		
 			"1"
 			{
-				"name"		"D-DIN"
+				"name"		"D-DIN" // UniversLTStd-BoldCn
 				"tall"		"33"	[!$OSX]
 				"tall"		"37"	[$OSX]
 				"weight"	"400"
@@ -1080,7 +1080,7 @@ Scheme
 			"1" [$GAMECONSOLE]
 			{
 				// SD requires a bolder font
-				"name"		"D-DIN"		[$GAMECONSOLELODEF]
+				"name"		"UniversLTStd-Cn"		[$GAMECONSOLELODEF]
 				// HD can support the lighter/thinner font
 				"name"		"UniversLTStd-LightCn"	[$GAMECONSOLEHIDEF]
 				"weight"	"700"
@@ -1090,41 +1090,13 @@ Scheme
 			"1" [!$GAMECONSOLE]
 			{
 				// HD or PC can support the lighter/thinner font
-				"name"		"D-DIN"		[$WIN32LODEF]
+				"name"		"UniversLTStd-Cn"		[$WIN32LODEF]
 				"tall"		"20"					[$WIN32LODEF && !$OSX]
 				"tall"		"21"					[$WIN32LODEF && $OSX]
 				"weight"	"400"					[$WIN32LODEF]
 				"name"		"UniversLTStd-LightCn"	[$WIN32HIDEF]
 				"tall"		"18"					[$WIN32HIDEF && !$OSX]
 				"tall"		"21"					[$WIN32HIDEF && $OSX]
-				"weight"	"700"					[$WIN32HIDEF]
-				"antialias"	"1"
-			}
-		}
-
-		"VideoSettingsDescriptionTitle"
-		{
-			"isproportional"	"only"		
-			"1"
-			{
-				"name"		"D-DIN"
-				"tall"		"24" [$WIN32WIDE]
-				"tall"		"20" [!$WIN32WIDE]
-				"weight"	"700"
-				"antialias"	"1"
-			}
-		}
-
-		"VideoSettingsDescription"
-		{
-			"isproportional"	"only"		
-			"1"
-			{
-				"name"		"D-DIN"		[$WIN32LODEF]
-				"tall"		"14"					[$WIN32LODEF]
-				"weight"	"400"					[$WIN32LODEF]
-				"name"		"UniversLTStd-LightCn"	[$WIN32HIDEF]
-				"tall"		"17"					[$WIN32HIDEF]
 				"weight"	"700"					[$WIN32HIDEF]
 				"antialias"	"1"
 			}
@@ -1137,7 +1109,7 @@ Scheme
 			"1"
 			{
 				"name"		"D-DIN"
-				"tall"		"18"
+				"tall"		"14"
 				"weight"	"400"
 				"antialias"	"1"
 			}
@@ -1149,10 +1121,10 @@ Scheme
 			"1"
 			{
 				"name"		"D-DIN"
-				"tall"		"18"		[$DECK]
-				"tall"		"18"		[$WIN32LODEF]
-				"tall"		"15"		[$WIN32HIDEF]
-				"weight"	"500"
+				"tall"		"16"		[$DECK]
+				"tall"		"14"		[$WIN32LODEF]
+				"tall"		"14"		[$WIN32HIDEF]
+				"weight"	"600"
 				"antialias"	"1"
 			}
 		}
@@ -1162,27 +1134,26 @@ Scheme
 			"isproportional"	"only"		
 			"1"
 			{
-				"name"		"D-DIN"
+				"name"		"UniversLTStd-BoldCn"
 				"tall"		"20"	[!$OSX]
 				"tall"		"22"	[$OSX]
-				"weight"	"700"
+				"weight"	"400"
 				"antialias"	"1"
 			}
 		}
 
 		// text for the controller callouts
-		// this is also used in CM leaderboards ("top friend", "friend to beat", etc)
 		"ControllerLayout"
 		{
 			"isproportional"	"only"		
 			"1"
 			{
-				"name"		"D-DIN"	[!$OSX]
-				"name"		"D-DIN"		[$OSX]
-				"tall"		"12"	[$GAMECONSOLE]
-				"tall"		"12"	[!$GAMECONSOLE && $WIN32LODEF && !$OSX]
+				"name"		"D-DIN"	[!$OSX] // UniversLTStd-BoldCn
+				"name"		"UniversLTStd-Cn"		[$OSX]
+				"tall"		"15"	[$GAMECONSOLE]
+				"tall"		"14"	[!$GAMECONSOLE && $WIN32LODEF && !$OSX]
 				"tall"		"12"	[!$GAMECONSOLE && $WIN32HIDEF && !$OSX]
-				"tall"		"12"	[$OSX]
+				"tall"		"18"	[$OSX]
 				"weight"	"400"
 				"antialias"	"1"
 			}
@@ -1194,7 +1165,7 @@ Scheme
 			"isproportional"	"only"		
 			"1"
 			{
-				"name"		"D-DIN"
+				"name"		"D-DIN" // UniversLTStd-BoldCn
 				"tall"		"20"	[!$OSX]
 				"tall"		"24"	[$OSX]
 				"weight"	"700"	[$GAMECONSOLE]
@@ -1208,12 +1179,11 @@ Scheme
 			"isproportional"	"only"		
 			"1"
 			{
-				"name"		"D-DIN"
-				"tall"		"24" [$DECK]
+				"name"		"D-DIN" // UniversLTStd-Cn
 				"tall"		"24" [$GAMECONSOLE]
-				"tall"		"14" [!$GAMECONSOLE && !$OSX] // Windows/Linux
+				"tall"		"16" [!$GAMECONSOLE && !$OSX] // WINDOWS/LINUX
 				"tall"		"24" [!$GAMECONSOLE && $OSX]
-				"weight"	"600"
+				"weight"	"700"
 				"antialias"	"1"
 			}
 		}	
@@ -1223,18 +1193,17 @@ Scheme
 			"isproportional"	"only"		
 			"1" [$OSX]
 			{
-				"name"		"D-DIN"
+				"name"		"D-DIN" // UniversLTStd-Cn
 				"tall"		"14"
-				"weight"	"600"
+				"weight"	"400"
 				"antialias"	"1"
 				"yres"	"1 500"
 			}
 			"2"
 			{
-				"name"		"D-DIN"
-				"tall"		"14" [$DECK]
+				"name"		"D-DIN" // UniversLTStd-Cn
 				"tall"		"14"
-				"weight"	"600"
+				"weight"	"400"
 				"antialias"	"1"
 				"yres"	"501 6000" [$OSX]
 			}
@@ -1245,7 +1214,7 @@ Scheme
 			"isproportional"	"only"		
 			"1"
 			{
-				"name"		"D-DIN"
+				"name"		"UniversLTStd-Cn"
 				"tall"		"14"
 				"weight"	"400"
 				"antialias"	"1"
@@ -1257,7 +1226,7 @@ Scheme
 			"isproportional"	"only"		
 			"1"
 			{
-				"name"		"D-DIN"
+				"name"		"UniversLTStd-Cn"
 				"tall"		"18"	[!$OSX]
 				"tall"		"20"	[$OSX]
 				"weight"	"400"
@@ -1270,10 +1239,10 @@ Scheme
 			"isproportional"	"only"		
 			"1"
 			{
-				"name"		"D-DIN"
+				"name"		"UniversLTStd-BoldCn"
 				"tall"		"18"	[!$OSX]
 				"tall"		"20"	[$OSX]
-				"weight"	"700"
+				"weight"	"400"
 				"antialias"	"1"
 			}
 		}						
@@ -1284,17 +1253,16 @@ Scheme
 			"1" [$OSX]
 			{
 				"name"		"UniversLTStd-Cn"
-				"tall"		"16"
+				"tall"		"18"
 				"weight"	"400"
 				"antialias"	"1"
 				"yres"	"1 500"
 			}
 			"2" 
 			{
-				"name"		"UniversLTStd-Cn"
-				"tall"		"20" [$DECK]
-				"tall"		"16"
-				"weight"	"700"
+				"name"		"UniversLTStd-BoldCn"
+				"tall"		"18"
+				"weight"	"400"
 				"antialias"	"1"
 				"yres"	"501 6000" [$OSX]
 			}
@@ -1305,7 +1273,7 @@ Scheme
 			"isproportional"	"only"		
 			"1" [$OSX]
 			{
-				"name"		"D-DIN"
+				"name"		"UniversLTStd-Cn"
 				"tall"		"16"
 				"weight"	"400"
 				"antialias"	"1"
@@ -1313,10 +1281,9 @@ Scheme
 			}
 			"2" 
 			{
-				"name"		"D-DIN"
-				"tall"		"18" [$DECK]
+				"name"		"UniversLTStd-BoldCn"
 				"tall"		"16"
-				"weight"	"700"
+				"weight"	"400"
 				"antialias"	"1"
 				"yres"	"501 6000" [$OSX]
 			}
@@ -1328,8 +1295,8 @@ Scheme
 		{
 			"1"
 			{
-				"name"		"D-DIN"
-				"tall"		"10"
+				"name"		"D-DIN" // UniversLTStd-Cn
+				"tall"		"12" // 20
 				"weight"	"500"
 				"antialias"	"1"
 			}
@@ -1339,8 +1306,8 @@ Scheme
 		{	
 			"1"
 			{
-				"name"		"D-DIN"
-				"tall"		"10"
+				"name"		"D-DIN" // UniversLTStd-Cn
+				"tall"		"12" // 20
 				"weight"	"500"
 				"italic"	"1"
 				"antialias"	"1"
@@ -1351,8 +1318,8 @@ Scheme
 		{		
 			"1"
 			{
-				"name"		"D-DIN"
-				"tall"		"10"
+				"name"		"D-DIN" // UniversLTStd-Cn
+				"tall"		"12" // 20
 				"weight"	"900"
 				"antialias"	"1"
 			}
@@ -1362,8 +1329,8 @@ Scheme
 		{
 			"1"
 			{
-				"name"		"D-DIN"
-				"tall"		"10"
+				"name"		"D-DIN" // UniversLTStd-Cn
+				"tall"		"12" // 20
 				"weight"	"900"
 				"italic"	"1"
 				"antialias"	"1"
@@ -1390,9 +1357,8 @@ Scheme
 			"isproportional"	"only"		
 			"1"
 			{
-				"name"			"UniversLTStd-BoldCn"
-				"tall"			"24" [$DECK]
-				"tall"			"19" [!$DECK]
+				"name"			"UniversLTStd-Cn"
+				"tall"			"19"
 				"weight"		"200"
 				"antialias"		"1"
 			}
@@ -1404,8 +1370,7 @@ Scheme
 			"1"
 			{
 				"name"			"UniversLTStd-BoldCn"
-				"tall"			"44" [$DECK]
-				"tall"			"34" [!$DECK]
+				"tall"			"34"
 				"weight"		"800"
 				"antialias"		"1"
 			}
@@ -1419,7 +1384,7 @@ Scheme
 			"1"
 			{
 				"name"			"UniversLTStd-BoldCn" [!$OSX]
-				"name"			"D-DIN" [$OSX]
+				"name"			"UniversLTStd-Cn" [$OSX]
 				"tall"			"18"
 				"weight"		"400"
 				"antialias"		"1"
@@ -1432,7 +1397,7 @@ Scheme
 			"1"
 			{
 				"name"			"UniversLTStd-BoldCn" [!$OSX]
-				"name"			"D-DIN" [$OSX]
+				"name"			"UniversLTStd-Cn" [$OSX]
 				"tall"			"14"
 				"weight"		"400"
 				"antialias"		"1"
@@ -1492,7 +1457,7 @@ Scheme
 			"isproportional"	"only"
 			"1" [$OSX]
 			{
-				"name"		"D-DIN" [$OSX]
+				"name"		"UniversLTStd-Cn" [$OSX]
 				"tall"		"14"
 				"weight"	"400"
 				"antialias" "0"
@@ -1501,7 +1466,7 @@ Scheme
 			"2"
 			{
 				"name"		"UniversLTStd-BoldCn" [!$OSX]
-				"name"		"D-DIN" [$OSX]
+				"name"		"UniversLTStd-Cn" [$OSX]
 				"tall"		"12"
 				"weight"	"400"
 				"antialias" "1"
@@ -1515,7 +1480,7 @@ Scheme
 			"1"
 			{
 				"name"		"UniversLTStd-BoldCn" [!$OSX]
-				"name"		"D-DIN" [$OSX]
+				"name"		"UniversLTStd-Cn" [$OSX]
 				"tall"		"9"		[!$GAMECONSOLE]
 				"tall"		"12"	[$GAMECONSOLE]
 				"weight"	"400"
@@ -1530,7 +1495,7 @@ Scheme
 			"isproportional"	"only"
 			"1" [$OSX]
 			{
-				"name"		"D-DIN"
+				"name"		"UniversLTStd-Cn"
 				"tall"		"16"
 				"weight"	"400"
 				"range"		"0x0000 0x017F" //	Basic Latin, Latin-1 Supplement, Latin Extended-A
@@ -1570,7 +1535,7 @@ Scheme
 			"1"
 			{
 				"name"		"UniversLTStd-BoldCn" [!$OSX]
-				"name"		"D-DIN" [$OSX]
+				"name"		"UniversLTStd-Cn" [$OSX]
 				"tall"		"24"
 				"weight"	"400"
 				"antialias" "1"
@@ -1587,55 +1552,7 @@ Scheme
 				"weight"	"400"
 				"antialias" "1"
 			}
-		}
-
-//////////////////////// PUZZLEMAKER /////////////////////////////
-
-		"PuzzleMakerUISmall"
-		{
-			"1"
-			{
-				"name"		"Arial"
-				"tall"		"16"
-				"weight"	"400"
-				"antialias" "1"
-			}
-		}
-
-		"PuzzleMakerUISmallItalic"
-		{
-			"1"
-			{
-				"name"		"Arial"
-				"tall"		"16"
-				"weight"	"400"
-				"italic"	"1"
-				"antialias" "1"
-			}
-		}
-
-		"PuzzleMakerUIMedium"
-		{
-			"1"
-			{
-				"name"		"Arial"
-				"tall"		"20"
-				"weight"	"400"
-				"antialias" "1"
-			}
-		}
-
-		"PuzzleMakerUIMenuBold"
-		{
-			"1"
-			{
-				"name"		"Arial"
-				"tall"		"24"
-				"weight"	"800"
-				"antialias" "1"
-			}
-		}
-					
+		}			
 	}
 
 	//
