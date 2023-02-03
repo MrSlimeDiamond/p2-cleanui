@@ -12,13 +12,14 @@
 		"visible"			"1"
 		"enabled"			"1"
 		"bgcolor_override"	"255 255 255 0"
-		"fgcolor_override"		"255 255 255 255"
+		"fgcolor_override"		"221 221 221 255"
 	}
 
 	"PnlGamerPic"
 	{
 		"ControlName"			"ImagePanel"
 		"fieldName"				"PnlGamerPic"
+		"fgcolor_override"		"255 255 255 255"
 		"xpos"					"3"
 		"ypos"					"2"
 		"zpos"					"1"
@@ -46,9 +47,8 @@
 		"Font"					"FriendsList"
 		"labelText"				""
 		"textAlignment"			"west"
-		"fgcolor_override"		"0 0 0 255"
+		"fgcolor_override"		"221 221 221 255"
 		"noshortcutsyntax"		"1"
-		"fgcolor_override"		"255 255 255 255"
 	}
 
 	"LblGamerScore"
@@ -68,9 +68,8 @@
 		"Font"					"FriendsListSmall" 
 		"labelText"				""
 		"textAlignment"			"west"
-		"fgcolor_override"		"0 0 0 255"
+		"fgcolor_override"		"221 221 221 255"
 		"noshortcutsyntax"		"1"
-		"fgcolor_override"		"255 255 255 255"
 	}
 
 	"LblScoreLegend"
@@ -89,8 +88,7 @@
 		"Font"					"FriendsListSmall"
 		"labelText"				""
 		"textAlignment"			"east"
-		"fgcolor_override"		"0 0 0 255"
+		"fgcolor_override"		"221 221 221 255"
 		"noshortcutsyntax"		"1"
-		"fgcolor_override"		"255 255 255 255"		
 	}
 }
