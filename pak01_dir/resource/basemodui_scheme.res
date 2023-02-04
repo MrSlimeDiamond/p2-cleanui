@@ -98,8 +98,8 @@ Scheme
 		Frame.BgColor					"0 0 0 255"
 		Frame.OutOfFocusBgColor			"0 0 0 255"
 		//Frame.OutOfFocusBgColor			"160 160 160 32"
-		Frame.FocusTransitionEffectTime	"0.3"	// time it takes for a window to fade in/out on focus/out of focus
-		Frame.TransitionEffectTime		"0.3"	// time it takes for a window to fade in/out on open/close
+		Frame.FocusTransitionEffectTime	"0"	// time it takes for a window to fade in/out on focus/out of focus
+		Frame.TransitionEffectTime		"0"	// time it takes for a window to fade in/out on open/close
 		Frame.AutoSnapRange				"0"
 		FrameGrip.Color1				"200 200 200 196"
 		FrameGrip.Color2				"0 0 0 196"
@@ -150,7 +150,7 @@ Scheme
 
 		PropertySheet.TextColor			"LightBlue"
 		PropertySheet.SelectedTextColor	"White"
-		PropertySheet.TransitionEffectTime	"0.6"	// time to change from one tab to another
+		PropertySheet.TransitionEffectTime	"0"	// time to change from one tab to another
 		PropertySheet.TabFont	"DefaultLarge"
 
 		RadioButton.TextColor			"DullWhite"
@@ -611,7 +611,7 @@ Scheme
 
 		"InGameChapterTitle"
 		{
-			"uppercase"		"0" // CleanUI
+			"uppercase"		"1"
 			"numbers"		"1"
 			"russianchars"		"1"
 		}
@@ -1226,7 +1226,7 @@ Scheme
 			"isproportional"	"only"		
 			"1"
 			{
-				"name"		"UniversLTStd-Cn"
+				"name"		"D-DIN" // UniversLTStd-Cn
 				"tall"		"18"	[!$OSX]
 				"tall"		"20"	[$OSX]
 				"weight"	"400"
@@ -1239,7 +1239,7 @@ Scheme
 			"isproportional"	"only"		
 			"1"
 			{
-				"name"		"UniversLTStd-BoldCn"
+				"name"		"D-DIN" // UniversLTStd-BoldCn
 				"tall"		"18"	[!$OSX]
 				"tall"		"20"	[$OSX]
 				"weight"	"400"

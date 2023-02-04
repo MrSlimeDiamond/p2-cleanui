@@ -72,8 +72,8 @@ Scheme
 		Frame.ClientInsetY				6
 		Frame.BgColor					"5 5 5 200"						//Overall overfalder
 		Frame.OutOfFocusBgColor			"5 5 5 200"						//Overfalder paa vinduer der er i baggrunden
-		Frame.FocusTransitionEffectTime	"0.05"							// time it takes for a window to fade in/out on focus/out of focus
-		Frame.TransitionEffectTime		"0.05"							// time it takes for a window to fade in/out on open/close
+		Frame.FocusTransitionEffectTime	"0"							// time it takes for a window to fade in/out on focus/out of focus
+		Frame.TransitionEffectTime		"0"							// time it takes for a window to fade in/out on open/close
 		Frame.AutoSnapRange				"0"
 		FrameGrip.Color1				"110 192 255 255"
 		FrameGrip.Color2				"0 0 0 100"
@@ -124,7 +124,7 @@ Scheme
 
 		PropertySheet.TextColor			"OffWhite"
 		PropertySheet.SelectedTextColor	"White"
-		PropertySheet.TransitionEffectTime	"0.25"	// time to change from one tab to another
+		PropertySheet.TransitionEffectTime	"0"	// time to change from one tab to another
 
 		RadioButton.TextColor			"DullWhite"
 		RadioButton.SelectedTextColor	"White"

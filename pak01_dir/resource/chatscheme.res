@@ -288,9 +288,9 @@ Scheme
 			"isproportional"	"only"
 			"1"
 			{
-				"name"		"Roboto"//Verdana
+				"name"		"D-DIN" // Verdana
 				"tall"		"9"
-				"weight"	"700"
+				"weight"	"500"
 				"dropshadow"	"1"
 				"antialias" 	"1"
 			}
