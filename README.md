@@ -26,8 +26,6 @@ This is not allowed in any% speedruns because it removes buttons on the main men
 ## Uninstallation
 * Remove the `pak01_dir.vpk` from `portal2_dlcX`
 * Remove the `media` directory from `portal2_dlcX`
-* Remove `pak01_dir.vpk` from `update`
-* Rename the copy you had back to `pak01_dir.vpk` (it's important to do this right, your game will break otherwise!)
 
 ## THANK YOU TO THESE PEOPLE
 * Rex - His nord theme inspired and helped a lot in the creation of this
