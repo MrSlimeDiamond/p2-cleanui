@@ -17,11 +17,11 @@ This is not allowed in any% speedruns because it removes buttons on the main men
 
 ## Installation
 * Go to the [releases](https://github.com/MrSlimeDiamond/p2-cleanui/releases)
-* Download `pak01_dir.vpk`, put it in a new DLC folder (if you don't have one, make a `portal2_dlc3` folder in `Portal 2/`)
-* Download `update.vpk` and put it in `Portal 2/update` 
-* Rename the existing `pak01_dir.vpk` to something else
-* Rename `update.vpk` to `pak01_dir.vpk`
-* Unzip everything in `media` into a directory named `media` in `portal2_dlcX`
+* Download `pak01_dir.vpk` and `media.zip` from the latest stable release
+* Rename your `Portal 2/update` directory to `portal2_dlc3` (rename other DLCs if necessary)
+* Create a new DLC (probably `portal2_dlc4`)
+* Put `pak01_dir.vpk` in the newly created DLC
+* Extract `media.zip` into a `media` directory in that DLC
 
 ## Uninstallation
 * Remove the `pak01_dir.vpk` from `portal2_dlcX`
