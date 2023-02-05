@@ -47,7 +47,7 @@
 		"Font"					"FriendsList"
 		"labelText"				""
 		"textAlignment"			"west"
-		"fgcolor_override"		"200 200 200 255"
+		"fgcolor_override"		"210 210 210 255"
 		"noshortcutsyntax"		"1"
 	}
 
@@ -68,7 +68,7 @@
 		"Font"					"FriendsListSmall" 
 		"labelText"				""
 		"textAlignment"			"west"
-		"fgcolor_override"		"200 200 200 255"
+		"fgcolor_override"		"210 210 210 255"
 		"noshortcutsyntax"		"1"
 	}
 
@@ -88,7 +88,7 @@
 		"Font"					"FriendsListSmall"
 		"labelText"				""
 		"textAlignment"			"east"
-		"fgcolor_override"		"200 200 200 255"
+		"fgcolor_override"		"210 210 210 255"
 		"noshortcutsyntax"		"1"
 	}
 }
