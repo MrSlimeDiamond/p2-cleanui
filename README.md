@@ -31,4 +31,5 @@ This is not allowed in any% speedruns because it removes buttons on the main men
 
 ## THANK YOU TO THESE PEOPLE
 * Rex - His nord theme inspired and helped a lot in the creation of this
-* AMJ - told me a lot of stuff i think idk
+* AMJ - told me a lot of stuff i think idk, also made menu background
+* Jaio - Made the old menu background and also hes cool

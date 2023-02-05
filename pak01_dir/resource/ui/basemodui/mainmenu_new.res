@@ -67,7 +67,7 @@
 		"navUp"						"BtnQuit"					[$GAMECONSOLE]
 		"navUp"						"BtnPlaySolo"				[!$GAMECONSOLE]
 		"navDown"					"BtnCommunity"
-		"labelText"					"Co-op"
+		"labelText"					"Cooperative"
 		"style"						"MainMenuButton"
 		"command"					"CoopPlay"
 		"ActivationType"			"1"
