@@ -1,6 +1,6 @@
 # CleanUI for Portal 2
 <div align=center>
-<img src="./otherassets/logo_ish_thingy.png" alt="logo kinda thing" width="800"/>
+<img src="./docs/logo_ish_thingy.png" alt="logo kinda thing" width="800"/>
 
 [Installation](https://github.com/MrSlimeDiamond/p2-cleanui#installation) | [Inspiration](https://gamebanana.com/mods/22973) | [Issues](https://github.com/MrSlimeDiamond/p2-cleanui/issues)
 
