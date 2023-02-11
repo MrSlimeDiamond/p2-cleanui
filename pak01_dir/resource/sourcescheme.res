@@ -273,14 +273,16 @@ Scheme
 			}
 		}
 
+		// CleanUI :: Smaller contimes
 		"DefaultFixedDropShadow" [!$GAMECONSOLE]
 		{
 			"1"
 			{
 				"name"		"Lucida Console"
-				"tall"		"14" [$LINUX]
+				"tall"		"11" [$LINUX]
 				"tall"		"11" [$POSIX]
-				"weight"	"1000"
+				"tall"      "11"
+				"weight"	"200"
 				"dropshadow" "1"
 			}
 		}
