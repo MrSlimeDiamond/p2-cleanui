@@ -16,6 +16,9 @@ This is not allowed in any% speedruns because it removes buttons on the main men
 * D-DIN font
 
 ## Installation
+
+[Install Guide Video](https://youtu.be/pRFYc5vRpTU)
+
 * Go to the [releases](https://github.com/MrSlimeDiamond/p2-cleanui/releases)
 * Download `pak01_dir.vpk` and `media.zip` from the latest stable release
 * Rename your `Portal 2/update` directory to `portal2_dlc3` (rename other DLCs if necessary)
