@@ -9,6 +9,8 @@
 ## !!! WARNING !!!
 This is not allowed in any% speedruns because it removes buttons on the main menu screen which can provide an advantage.
 
+This doesn't work in speedrun mod for some wacky reason, I'll get around to fixing
+
 ## Includes
 * Dark theme UI's
 * Custom menu background (optional)
